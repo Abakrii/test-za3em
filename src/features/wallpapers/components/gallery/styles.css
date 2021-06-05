@@ -1,0 +1,56 @@
+.content {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 25px;
+  grid-gap: 25px;
+  grid-auto-flow: dense;
+  align-items: stretch;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.zoom {
+  transition: transform 0.2s;
+  cursor: pointer;
+  width: 400px;
+  height: 300px;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
+
+.downloadBtn {
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  display: none;
+}
+img:hover + .downloadBtn,
+.downloadBtn:hover {
+  display: inline-block;
+}
